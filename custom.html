@@ -5,13 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Property</title>
+    <style>
+      :root {
+        --side-width: 200px;
+        --dark-border: 2px solid green;
+        --main-color: red;
+        --border-color: rgb(94, 205, 90);
+        --backgroud-color: rgb(177, 78, 29);
+      }
+      h1 {
+        color: var(--main-color);
+      }
+      p {
+        color: var(--main-color);
+      }
+      h2 {
+        border: 2px solid var(--border-color);
+        color: var(--main-color);
+      }
+      h6 {
+        background-color: var(--backgroud-color);
+      }
+      footer {
+        clear: both;
+        border: var(--dark-border);
+        color: var(--main-color);
+      }
+      .side-nav,
+      .blogs {
+        float: left;
+        height: 500px;
+      }
+      aside {
+        background-color: orange;
+        width: var(--side-width);
+      }
+      .blogs {
+        background-color: brown;
+        width: calc(100% - 2 * var(--side-width));
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1>I am exploring my custom property</h1>
       <p>Welcome to my custom world</p>
     </header>
-    <main></main>
+    <main>
+      <h2>My Awsome contant</h2>
+      <h6>My Fatakesto site</h6>
+      <section>
+        <aside class="side-nav">my side navigation</aside>
+        <div class="blogs">
+          <h4>Blogs</h4>
+        </div>
+      </section>
+    </main>
     <footer>
       <p><small>Copyright</small></p>
     </footer>
